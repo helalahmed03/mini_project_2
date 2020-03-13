@@ -1,0 +1,16 @@
+from tkinter import *
+
+root = Tk()
+root.geometry('300x300')
+root.title("Melody")
+root.iconbitmap(r'a2.ico')
+
+text = Label(root, text='Lets make some noise!')
+text.pack()
+
+photo = PhotoImage(file='images/play1.png')
+labelphoto = Label(root, image = photo)
+labelphoto.pack()
+
+
+root.mainloop()
