@@ -1,0 +1,22 @@
+from tkinter import *
+from pygame import mixer
+
+
+root = Tk()
+mixer.init()
+root.geometry('300x300')
+root.title("Melody")
+root.iconbitmap(r'a2.ico')
+
+text = Label(root, text='Lets play some music!')
+text.pack()
+
+def play_music():
+    mixer.music.load("song.mp3")
+    mixer.music.play()
+
+playPhoto = PhotoImage(file='images/play1.png')
+playBtn = Button(root, image=playPhoto, command=play_music)
+playBtn.pack()
+
+root.mainloop()
